@@ -1,5 +1,13 @@
-/* function that uses a random number generator to output either
-'Rock', 'Paper' or 'Scissors' */
+/* Program that uses a random number generator to output either
+'Rock', 'Paper' or 'Scissors' to a given user prompt and play a game
+of rock paper scissors */
+
+
+
+let playerSelection = prompt('Rock, Paper or Scissors?');
+game(playerSelection);
+const a;
+const b;
 
 function computerPlay() {
 
@@ -19,7 +27,6 @@ function computerPlay() {
 function rockPaperScissors(playerSelection) {
 
     playerSelection = String(playerSelection);
-    console.log(playerSelection);
     let computerSelection = computerPlay();
     
 
@@ -59,5 +66,15 @@ function rockPaperScissors(playerSelection) {
     else {
         return 'Please enter a valid input (Rock, Paper or Scissors)';
     }
+
+    
 }
- 
+
+function game(playerSelection) {
+    let imax = prompt('How many rounds');
+    for (let i = 0; i < imax; i++) {
+        console.log(i);
+        result = rockPaperScissors(playerSelection);
+        console.log(result);
+    }
+} 
