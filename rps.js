@@ -11,9 +11,9 @@ var imax;
 const tally = [];
 
 /* Tally */
-const div = document.createElement('div');
-div.textContent = `${player} | ${computer}`
-container.appendChild(div); 
+const score = document.createElement('div');
+score.textContent = `${player} | ${computer}`
+container.appendChild(score); 
 
 const history = document.createElement('div');
 history.classList.add('tally');
@@ -40,7 +40,7 @@ buttons.forEach((button) => {
     result = rockPaperScissors(playerSelection);
     player += result[0];
     computer += result[1];
-    div.textContent = `${player} | ${computer}`
+    score.textContent = `${player} | ${computer}`
     
     tally.push(result[2]);
     history.textContent = `${tally}`;
